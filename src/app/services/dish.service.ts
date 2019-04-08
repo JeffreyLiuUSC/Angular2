@@ -12,6 +12,4 @@ export class DishService {
     return DISHES;
   }
   constructor() { };
-
-
 }
