@@ -42,6 +42,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { BaseURL } from './shared/baseurl';
 
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +89,7 @@ import { BaseURL } from './shared/baseurl';
   providers: [DishService, 
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     {provide: 'BaseURL', useValue: BaseURL}],
   bootstrap: [AppComponent]
 })

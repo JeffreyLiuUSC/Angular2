@@ -31,10 +31,6 @@
             class="fa fa-chevron-right fa-lg"></span></button>
         </mat-card-actions>
       </mat-card>
-      <div [hidden]="dish">
-          <mat-spinner></mat-spinner>
-          <h4>Loading... Please wait</h4>
-      </div> 
     </div>
   </div>
 
@@ -83,4 +79,12 @@
 
   </div>
 
+  <div [hidden]="dish || errMess">
+    <mat-spinner></mat-spinner>
+    <h4>Loading... Please wait</h4>
+  </div> 
+  <div fxFlex *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
 </div>
