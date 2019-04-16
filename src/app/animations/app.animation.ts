@@ -1,5 +1,5 @@
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { stat } from 'fs';
+
 
 export function visibility(){
     return trigger('visibility',[

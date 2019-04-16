@@ -7,7 +7,7 @@ import { switchMap } from 'rxjs/operators';
 import 'hammerjs';
 import { Comment, Rating } from '../shared/comment';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { visibility,flyInOut } from '../animations/app.animation';
+import { visibility,flyInOut,expand } from '../animations/app.animation';
 
 
 
@@ -17,11 +17,12 @@ import { visibility,flyInOut } from '../animations/app.animation';
   styleUrls: ['./dishdetail.component.scss'],
   host:{
     '[@flyInOut]':'true',
-    'style':'display:block'
+    'style':'display:block;'
   },
   animations:[
     flyInOut(),
-    visibility()
+    visibility(),
+    expand()
   ]
 })
 export class DishdetailComponent implements OnInit {
@@ -110,7 +111,7 @@ export class DishdetailComponent implements OnInit {
             }
         }
     }
-}
+  }
 
 onSubmit() {
   // this.Comment = this.dishRatingForm.value;
